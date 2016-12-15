@@ -18,6 +18,12 @@ function LED_runningLight_fct()
     i=i+1
     end
 
+function LED_Clear()
+    tmr.unregister(0)
+    buffer:fill(0,0,0)
+    ws2812.write(buffer)
+    end
+
 function LED_Init()
     print("LED_Init")
     ws2812.init()
